@@ -99,14 +99,10 @@ public class TestBridgeTopNavLinks extends BaseTest{
 
 	@Test
 	public void verifySolutionsUrl() {
-        System.out.println("##verifySolutionsUrl##");
-
         Browser browser = new Browser(TLDriverFactory.getDriver());
         browser.goToHomePage(homePage);
 
         BridgePageTopNav bridgePageTopNav = new BridgePageTopNav(TLDriverFactory.getDriver());
-
-        System.out.println("#### PAGEOBJECT INITIALIZED ####");
 
 		bridgePageTopNav.hoverOnSolutionsTab();
 		String popUpOptions1 = bridgePageTopNav.getTextSolutionsPopUpOptions1();

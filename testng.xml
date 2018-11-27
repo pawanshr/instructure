@@ -8,12 +8,18 @@
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeTopNavLinks" />
+            <class name="com.sevadevelopment.getbridge.tests.TestBridgeFooterLinks"/>
+            <class name="com.sevadevelopment.getbridge.tests.TestRequestDemoForm"/>
+            <class name="com.sevadevelopment.getbridge.tests.VideoPlayerDemo"/>
         </classes>
     </test>
     <test name="Test In Firefox"  parallel="methods" thread-count="2">
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeTopNavLinks" />
+            <class name="com.sevadevelopment.getbridge.tests.TestBridgeFooterLinks"/>
+            <class name="com.sevadevelopment.getbridge.tests.TestRequestDemoForm"/>
+            <class name="com.sevadevelopment.getbridge.tests.VideoPlayerDemo"/>
         </classes>
     </test>
 </suite>
