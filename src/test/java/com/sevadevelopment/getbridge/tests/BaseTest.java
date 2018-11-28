@@ -39,5 +39,4 @@ public class BaseTest {
         }
         System.out.println("BFFORE METHOD : "+Thread.currentThread().getId());
     }
-
 }

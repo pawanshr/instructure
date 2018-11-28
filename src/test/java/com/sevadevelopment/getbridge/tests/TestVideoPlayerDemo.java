@@ -1,5 +1,6 @@
 package com.sevadevelopment.getbridge.tests;
 
+import com.sevadevelopment.getbridge.pageobjects.VideoPlayerHelper;
 import com.sevadevelopment.utility.Browser;
 import com.sevadevelopment.utility.TLDriverFactory;
 import io.restassured.RestAssured;
@@ -13,17 +14,17 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class VideoPlayerDemo extends BaseTest{
-	//GenerateTestReport generateTestReport = new GenerateTestReport(driver);
+public class TestVideoPlayerDemo extends BaseTest {
+	// GenerateTestReport generateTestReport = new GenerateTestReport(driver);
 
 	@AfterSuite
 	public void doAfterSuite() {
-		//generateTestReport.flushReport(driver);
+		// generateTestReport.flushReport(driver);
 	}
 
 	@AfterMethod
 	public void tearDownTestMethod(ITestResult result) {
-		//generateTestReport.getReport(result);
+		// generateTestReport.getReport(result);
 	}
 
 	@Test(description = "To verify video source is available")
@@ -31,10 +32,12 @@ public class VideoPlayerDemo extends BaseTest{
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
 
-		String elementval = TLDriverFactory.getDriver().findElement(By.className("paragraph-play-button")).getAttribute("data-wistiaid");
-		System.out.println("WISTIA-VIDEO-ID: " + elementval);
+		VideoPlayerHelper videoPlayerHelper = new VideoPlayerHelper(TLDriverFactory.getDriver());
 
-		RestAssured.baseURI = "https://fast.wistia.net/embed/iframe/" + elementval;
+		String videoId = videoPlayerHelper.getTextWistiaVideoId();
+		System.out.println("WISTIA-VIDEO-ID: " + videoId);
+
+		RestAssured.baseURI = "https://fast.wistia.net/embed/iframe/" + videoId;
 		RequestSpecification httpRequest = RestAssured.given();
 		Response response = httpRequest.get();
 

@@ -10,7 +10,7 @@
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeTopNavLinks" />
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeFooterLinks"/>
             <class name="com.sevadevelopment.getbridge.tests.TestRequestDemoForm"/>
-            <class name="com.sevadevelopment.getbridge.tests.VideoPlayerDemo"/>
+            <class name="com.sevadevelopment.getbridge.tests.TestVideoPlayerDemo"/>
         </classes>
     </test>
     <test name="Test In Firefox"  parallel="methods" thread-count="2">
@@ -19,7 +19,7 @@
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeTopNavLinks" />
             <class name="com.sevadevelopment.getbridge.tests.TestBridgeFooterLinks"/>
             <class name="com.sevadevelopment.getbridge.tests.TestRequestDemoForm"/>
-            <class name="com.sevadevelopment.getbridge.tests.VideoPlayerDemo"/>
+            <class name="com.sevadevelopment.getbridge.tests.TestVideoPlayerDemo"/>
         </classes>
     </test>
 </suite>

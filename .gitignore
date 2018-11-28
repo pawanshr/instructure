@@ -1,0 +1,10 @@
+/target/
+.idea
+.iml
+target
+.classpath
+.settings
+.project
+bin
+test-output
+src/main/resources/extent-config.xml
