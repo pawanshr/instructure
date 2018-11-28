@@ -38,6 +38,7 @@ public class TLDriverFactory {
     }
 
     public static synchronized WebDriverWait getWait (WebDriver driver) {
+    	driver.manage().window().maximize();
         return new WebDriverWait(driver,20);
     }
 
