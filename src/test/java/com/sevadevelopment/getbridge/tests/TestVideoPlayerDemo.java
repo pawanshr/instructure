@@ -1,18 +1,19 @@
 package com.sevadevelopment.getbridge.tests;
 
-import com.sevadevelopment.getbridge.pageobjects.VideoPlayerHelper;
-import com.sevadevelopment.utility.Browser;
-import com.sevadevelopment.utility.TLDriverFactory;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
-import org.openqa.selenium.By;
+import static org.testng.Assert.assertTrue;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertTrue;
+import com.sevadevelopment.getbridge.pageobjects.VideoPlayerHelper;
+import com.sevadevelopment.utility.Browser;
+import com.sevadevelopment.utility.TLDriverFactory;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public class TestVideoPlayerDemo extends BaseTest {
 	// GenerateTestReport generateTestReport = new GenerateTestReport(driver);

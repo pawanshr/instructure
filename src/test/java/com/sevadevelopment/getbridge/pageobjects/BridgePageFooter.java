@@ -21,7 +21,7 @@ public class BridgePageFooter extends BasePageObject {
 	@FindBy(xpath = "//*[@id=\"footer-top-links\"]/div/a[2]")
 	WebElement privacyPolicy;
 
-	@FindBy(xpath = "//*[@id=\"footer-top-links\"]/div/a[2]")
+	@FindBy(xpath = "//*[@id=\"spotMtext\"]/div[1]")
 	WebElement getTextPrivacyPolicy;
 
 	@FindBy(xpath = "//*[@id=\"footer-top-links\"]/div/a[3]")

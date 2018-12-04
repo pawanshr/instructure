@@ -1,30 +1,16 @@
 
 package com.sevadevelopment.getbridge.tests;
 
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import com.sevadevelopment.getbridge.pageobjects.BridgePageFooter;
 import com.sevadevelopment.utility.Browser;
 import com.sevadevelopment.utility.TLDriverFactory;
-import org.openqa.selenium.By;
-import org.testng.Assert;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.Test;
 
 public class TestBridgeFooterLinks extends BaseTest {
-	// GenerateTestReport generateTestReport = new GenerateTestReport(driver);
-
-	@AfterSuite
-	public void doAfterSuite() {
-		// generateTestReport.flushReport(driver);
-	}
-
-	@AfterMethod
-	public void tearDownTestMethod(ITestResult result) {
-		// generateTestReport.getReport(result);
-	}
-
-	@Test
+	
+	@Test(enabled=true)
 	public void verifyAccessibilityUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -43,7 +29,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(accessibilityRedirectedPage.contains("Web Content Accessibility Guidelines 2.0"));
 	}
 
-	@Test
+	@Test(enabled=true)
 	public void verifyPrivacyPolicyUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -60,7 +46,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(privacyPolicyRedirectedPage.contains("Instructure Privacy Policy"));
 	}
 
-	@Test
+	@Test(enabled=true)
 	public void verifyTermsOfUseUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -77,7 +63,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(termsOfUsePage.contains("Terms of Use"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyContactSalesUrl() throws Exception {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -89,7 +75,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertEquals(contactSalesNumber, "tel:+1-877-576-5364");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyManagementUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -106,7 +92,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(managementRedirectedPage.contains("Continuous 1:1 Management"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyTimelineModuleUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -123,7 +109,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(timelineModuleRedirectedPage.contains("Employee Timeline"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifySkillsAsseessmentUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -140,7 +126,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(skillsAssessmentRedirectedPage.contains("Skills Assessment"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyGoalsAndTasksUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -157,7 +143,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(goalsAndTasksRedirectedPage.contains("Goals and Tasks"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyRobustReportingUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -174,7 +160,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(robustReportingRedirectedPage.contains("Robust Reporting"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyRetainUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -191,7 +177,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(retainRedirectedPage.contains("Retain"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyContentServicesUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -208,7 +194,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(contentServicesRedirectedPage.contains("Content Services"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyOffTheShelfCoursesUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -225,7 +211,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(offTheShelfCoursesRedirectedPage.contains("Off-the-Shelf-Courses"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyArcVideoUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -242,7 +228,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(arcVideoRedirectedPage.contains("Arc Video"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyLearnFromYourLearningUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -259,7 +245,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(learnMoreRedirectedPage.contains("Learn from your Learning"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyManagerDashboardUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -276,7 +262,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(managerDashboardRedirectedPage.contains("Manager Dashboard"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyAdminUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -293,7 +279,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(adminRedirectedPage.contains("Admin"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyEasyToUseUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -310,7 +296,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(easyToUseRedirectedPage.contains("Easy to Use, Easy to Love"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyAnytimeAnywhereUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -327,7 +313,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(anytimeAnywhereRedirectedPage.contains("Anytime, Anywhere Learning"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyContactTelephoneEmailAndLocation() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -350,7 +336,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertEquals(contactLocationText2, "Salt Lake City, UT 84121");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifySocialNetworkPagesUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -370,7 +356,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertEquals(linkedinUrl, "https://www.linkedin.com/showcase/get-bridge/");
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomSupportTermsUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -387,7 +373,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(supportTermsRedirectedPage.contains("Support Terms"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomPrivacyPolicyUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -403,7 +389,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(privacyPolicyRedirectedPage.contains("Instructure Privacy Policy"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomTermsOfUseUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -420,7 +406,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(supportTermsRedirectedPage.contains("Terms of Use"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomAccessibilityUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -439,7 +425,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(bottomAccessibilityRedirectedPage.contains("Web Content Accessibility Guidelines 2.0"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomGDPRUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
@@ -456,7 +442,7 @@ public class TestBridgeFooterLinks extends BaseTest {
 		Assert.assertTrue(bottomGDPRRedirectedPage.contains("THE GENERAL DATA PROTECTION REGULATION (GDPR)"));
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void verifyBottomNewsUrl() {
 		Browser browser = new Browser(TLDriverFactory.getDriver());
 		browser.goToHomePage(homePage);
