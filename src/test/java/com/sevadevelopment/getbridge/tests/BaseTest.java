@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import org.apache.commons.lang3.SystemUtils;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;

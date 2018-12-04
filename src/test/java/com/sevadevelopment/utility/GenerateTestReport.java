@@ -23,7 +23,6 @@ public class GenerateTestReport {
 	}
 
 	public void startReport(String browser, Method method) {
-		System.out.println("printing browser name in report ---------- " + browser + method.getName() + Thread.currentThread().getId());
 		logger = extent.startTest(method.getName() + "-In-" + browser + "-" + Thread.currentThread().getId());
 	}
 
