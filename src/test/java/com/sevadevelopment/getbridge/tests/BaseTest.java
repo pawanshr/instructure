@@ -23,13 +23,13 @@ public class BaseTest {
 	public void setupTest(@Optional String browser, Method method) {
 		try {
 			generateTestReport.startReport(browser, method);
+			System.out.println("::::::::::::::  Test started for " + method.getName() + " method in " + browser + "  ::::::::::::::");
 		} catch (Exception e) {
 			e.getMessage();
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
 
 			if (SystemUtils.IS_OS_LINUX) {
-				System.out.println("should set chrome driver for linux");
 				System.setProperty("webdriver.chrome.driver",
 						"src/test/resources/drivers/chromeDriver/chromedriver_linux_64");
 			} else if (SystemUtils.IS_OS_WINDOWS) {
@@ -40,7 +40,6 @@ public class BaseTest {
 		} else if (browser.equalsIgnoreCase("firefox")) {
 
 			if (SystemUtils.IS_OS_LINUX) {
-				System.out.println("should set gecko driver for linux");
 				System.setProperty("webdriver.gecko.driver",
 						"src/test/resources/drivers/geckoDriver/geckodriver_linux_64");
 			} else if (SystemUtils.IS_OS_WINDOWS) {
@@ -54,7 +53,6 @@ public class BaseTest {
 	@AfterMethod
 	@Parameters(value = { "browser" })
 	public void tearDownTestMethod(String browser, ITestResult result) {
-		System.out.println("================== " + browser);
 		try {
 			generateTestReport.getReport(browser, result);
 		} catch (Exception e) {

@@ -244,15 +244,15 @@ public class BridgePageFooter extends BasePageObject {
 	}
 
 	public String getTextContactTelNo() {
-		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactTelNo)).getText();
+		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactTelNo)).getAttribute("href");
 	}
 
 	public String getTextContactEmail() {
-		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactEmail)).getText();
+		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactEmail)).getAttribute("href");
 	}
 
 	public String getTextContactLocationUrl() {
-		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactLocationUrl)).getText();
+		return webDriverWait.until(ExpectedConditions.visibilityOf(getContactLocationUrl)).getAttribute("href");
 	}
 
 	public String getTextContactLocationText1() {

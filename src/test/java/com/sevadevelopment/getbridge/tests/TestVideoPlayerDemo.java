@@ -16,17 +16,6 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class TestVideoPlayerDemo extends BaseTest {
-	// GenerateTestReport generateTestReport = new GenerateTestReport(driver);
-
-	@AfterSuite
-	public void doAfterSuite() {
-		// generateTestReport.flushReport(driver);
-	}
-
-	@AfterMethod
-	public void tearDownTestMethod(ITestResult result) {
-		// generateTestReport.getReport(result);
-	}
 
 	@Test(description = "To verify video source is available")
 	public void verifyVideoSourceIsAvailable() throws Exception {
