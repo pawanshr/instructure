@@ -1,14 +1,6 @@
 
 package com.sevadevelopment.getbridge.tests;
 
-import com.sevadevelopment.getbridge.pageobjects.BridgePageTopNav;
-import com.sevadevelopment.utility.Browser;
-import com.sevadevelopment.utility.TLDriverFactory;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -16,10 +8,18 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.sevadevelopment.getbridge.pageobjects.BridgePageTopNav;
+import com.sevadevelopment.utility.Browser;
+import com.sevadevelopment.utility.TLDriverFactory;
+
 public class TestBridgeTopNavLinks extends BaseTest{
 	HttpURLConnection huc = null;
 	int respCode = 200;
-	//GenerateTestReport generateTestReport = new GenerateTestReport(driver);
 
 	//@Test
 	public void checkAlllinks() {
@@ -121,7 +121,7 @@ public class TestBridgeTopNavLinks extends BaseTest{
 		Assert.assertEquals(solutionPageTitle, "Bridge Software Solutions");
 	}
 
-	//@Test
+	@Test
 	public void verifyCustomerStoriesUrl() {
         System.out.println("##verifyCustomerStoriesUrl##");
 
@@ -179,7 +179,7 @@ public class TestBridgeTopNavLinks extends BaseTest{
 		Assert.assertEquals(resourcesPageTitle, "Bridge Resources");
 	}
 
-	//@Test
+	@Test
 	public void verifyAboutUrl() {
         System.out.println("##verifyAboutUrl##");
 
@@ -211,7 +211,7 @@ public class TestBridgeTopNavLinks extends BaseTest{
 		Assert.assertEquals(aboutPageTitle, "About Bridge");
 	}
 
-	//@Test
+	@Test
 	public void verifyBlogUrl() {
         System.out.println("##verifyBlogUrl##");
 
@@ -228,7 +228,7 @@ public class TestBridgeTopNavLinks extends BaseTest{
 		Assert.assertEquals(blogUrl, "https://www.getbridge.com/blog");
 	}
 
-	//@Test
+	@Test
 	public void verifyBookADemoUrl() {
         System.out.println("##verifyBookADemoUrl##");
 

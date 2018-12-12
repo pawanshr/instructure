@@ -17,7 +17,7 @@ public class InvokedMethodListener implements IInvokedMethodListener {
 
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        if (method.isTestMethod()) {
+        if (method.isTestMethod()) {    	
             System.out.println("Test Method AfterInvocation is started. " + Thread.currentThread().getId());
             WebDriver driver = TLDriverFactory.getDriver();
             if (driver != null) {
